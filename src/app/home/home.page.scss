@@ -1,0 +1,32 @@
+ion-checkbox {
+  --size: 32px;
+  --background-checked: green;
+}
+
+ion-checkbox::part(container) {
+  border-radius: 6px;
+  border: 2px solid #8d5eda;
+}
+
+.titulo{
+  --background: rgb(184, 153, 51);
+  font-size: 25px;
+  font-weight: 1000;
+}
+
+.inserir{
+  --background: white;
+  --color: black;
+  font-weight: 1000;
+}
+
+.lista{
+  --background: green;
+}
+
+.tarefa{
+  --background: rgb(230, 165, 95);
+  
+  
+
+}

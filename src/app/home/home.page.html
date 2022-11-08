@@ -1,0 +1,25 @@
+<ion-content class="lista">
+  <ion-item class="titulo">
+    <ion-label position="floating">Inserir tarefa:</ion-label>
+    <ion-input [(ngModel)]="novaTarefa"></ion-input>
+  </ion-item>
+  <ion-button class="inserir" [disabled]="!novaTarefa" (click)="adicionarTarefa()" expand="block">Inserir</ion-button>
+
+  <ion-list *ngFor="let tarefa of tarefas; let indice = index">
+
+    <ion-item-sliding>
+
+      <ion-item class="tarefa">
+        <ion-checkbox slot="start" (ionChange)="atualizarStatus(indice)" checked="{{tarefa.concluido}}"></ion-checkbox>
+        <ion-label>{{tarefa.nomeTarefa}}</ion-label>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-button color="danger" (click)="apagarTarefa(indice)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
